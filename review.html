@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <!-- Сброс стилей -->
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <!-- /Сброс стилей -->
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"type="text/css" href="css/flag-icon.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="css/default_styles.css">
+    <link rel="stylesheet" type="text/css" href="css/custom_styles.css">
+    <link rel="stylesheet" href="css/fix_header.css">
+    
+</head>
+<body class="page-home">
+    <section class="top-bar top-bar_new js-top-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 my-auto control_block">
+                    <!-- nav-mobile-toggler-->
+                    <a href="#" id="nav-mobile-toggler" class="nav-mobile-toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                <path d="M1.50993 1L25 25M24.4901 1L1 25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="top-bar-callback-link-mob" data-fancybox="" data-src="#callback-form"><img src="images/u24.png" alt=""></a>
+                    <!-- /.nav-mobile-toggler -->
+                    <ul class="top-bar-list d-none d-lg-block">
+                        <li class="top-bar-phone">
+                            <i class="fas icon icon-phone-alt"></i>
+                            <a href="tel:+420255790539" class="link-gray-darker">+420255790539</a>
+                        </li>
+                        <li class="top-bar-callback">
+                            <a href="javascript:void(0);" class="top-bar-callback-link callback_new" data-fancybox="" data-src="#callback-form">Обратный звонок</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none">
+                    <form id="callback-form" class="callback-form">
+
+                        <p class="callback-form-title">Заказать звонок</p>
+                        <input class="callback-form-input" type="text" placeholder="Имя*" name="name" required="">
+                        <input id="contact_phone" class="callback-form-input" type="text" placeholder="Контактный телефон +7 (ххх) ххх-хх-хх*" name="phone" required="">
+                        <button type="submit" class="callback-form-btn">Отправить</button>
+                    </form>
+                    <div id="fancyalert" class="fancyalert">
+                        <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+                    </div>
+                </div>
+                <div class="col-4 my-auto text-center logo_block">
+                    <!-- form-search -->
+                    <form class="form-search form--dark  d-none d-lg-block" action="/search">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" name="query" value="" placeholder="Поиск...">
+                            <button type="submit" class="form-search-btn fas icon-search"></button>
+                        </div>
+                    </form>
+                    <a class="logo">
+                        <img src="images/logo_mob.svg" alt="">
+                    </a>
+                    <!-- /.form-search -->
+                </div>
+                <div class="col-4 my-auto text-right block_link">
+                    <!-- mini-cart -->
+                    <div class="mini-cart mr-lg-3">
+                        <a href="/cart">
+                            <i class="fas icon icon-shopping-cart"></i>
+                            <span class="ms2_total_count">0</span>
+                        </a>
+                    </div>
+                    <!-- /.mini-cart -->
+                    <!-- currency -->
+                    <ul class="currency">
+                        <li>
+                            <span>Euro</span>
+                            <ul class="currency-dropdown js-currency">
+                                <li><a href="#" data-id="4"><span>CZK </span>CZK</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.currency -->
+                    <!-- language -->
+                    <ul id="language" class="language">
+                        <li>
+                            <i class="fas icon icon-globe"></i><span>Русский</span>
+                            <ul class="language-dropdown">
+                                <li>Русский</li>
+                                <li>Русский</li>
+                                <li>Русский</li>
+                                <li>Русский</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.language -->
+                    <!-- region-->
+                    <ul id="region" class="language">
+                        <li>
+                            <i class="fas icon region-link__1"></i><span>Россия</span>
+                            <ul class="language-dropdown">
+                                <li><a class="region-link region-link__2" href="https://kalitagold.cz">Česko</a></li>
+                                <li><a class="region-link region-link__3" href="https://kalitagold.ch">Schweiz</a></li>
+                                <li><a class="region-link region-link__4" href="https://kalitagold.de">Deutschland</a></li>
+                                <li><a class="region-link region-link__5" href="https://kalitagold.es">España</a></li>
+                                <li><a class="region-link region-link__6" href="https://kalitagold.eu">Europe</a></li>
+                                <li><a class="region-link region-link__7" href="https://kalitagold.fr">La France</a></li>
+                                <li><a class="region-link region-link__8" href="https://kalitagold.it">Italia</a></li>
+                                <li><a class="region-link region-link__9" href="https://kalitagold.nl">Nederland</a></li>
+                                <li><a class="region-link region-link__10" href="https://kalitagold.pl">Polska</a></li>
+                                <li><a class="region-link region-link__11" href="https://kalitagold.uk">Greate Britan</a></li>
+                                <li><a class="region-link region-link__12" href="https://kalitagold.be">België</a></li>
+                                <li><a class="region-link region-link__13" href="https://kalitagold.at">Österreich</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.region-->
+                </div>
+                
+            </div>
+        </div>
+        <!-- nav-mobile-->
+        <div id="nav-mobile" class="nav-mobile">
+            <!-- form-search -->
+            <form class="form-search form--dark" action="/search">
+                <div class="form-group">
+                    <input class="form-control form-control-sm" name="query" value="" placeholder="Поиск...">
+                    <button type="submit" class="form-search-btn fas icon-search"></button>
+                </div>
+            </form>
+            <!-- /.form-search -->
+            <ul>
+                <li class="sub-menu">
+                    <a href="/katalog/" title="Полный каталог монет">Полный каталог монет</a>
+                    <!-- mobile-subnav -->
+                    <ul>
+                        <li class="sub-menu">
+                            <a href="/katalog/bullion-coins/" title="Инвестиционные монеты">Инвестиционные монеты</a>
+                            <!-- mobile-subnav -->
+                            <ul>
+                                <li>
+                                    <a href="/katalog/bullion-coins/gold/" title="Золотые инвестиционные монеты" type="">Золотые инвестиционные монеты</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/silver/" title="Серебряные инвестиционные монеты" type="">Серебряные инвестиционные монеты</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/australian-kangaroo/" title="Австралийский кенгуру" name="">Австралийский кенгуру</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/american-buffalo/" title="Американский бизон" name="">Американский бизон</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/american-eagle/" title="Американский орёл" name="">Американский орёл</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/britannia/" title="Британия" name="">Британия</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/vienna-philharmonic/" title="Венский филармоникер" name="">Венский филармоникер</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/maple-leaf/" title="Кленовый лист" name="">Кленовый лист</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/krugerrand/" title="Крюгерранд" name="">Крюгерранд</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/panda/" title="Панда" name="">Панда</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/australian/" title="Инвестиционные монеты Австралии" country="">Австралия</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/austria/" title="Инвестиционные монеты Австрии" country="">Австрия</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/great-britain/" title="Инвестиционные монеты Великобритании" country="">Великобритания</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/ghana/" title="Инвестиционные монеты Ганы" country="">Гана</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/gerrmany/" title="Инвестиционные монеты Германии" country="">Германия</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/canada/" title="Инвестиционные монеты Канады" country="">Канада</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/china/" title="Инвестиционные монеты Китая" country="">Китай</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/mexico/" title="Инвестиционные монеты Мексики" country="">Мексика</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/investicionnye-monety-rossii/" title="Инвестиционные монеты России" country="">Россия</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/usa/" title="Инвестиционные монеты США" country="">США</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/ukraine/" title="Инвестиционные монеты Украины" country="">Украина</a>
+    
+                                </li>
+                                <li>
+                                    <a href="/katalog/bullion-coins/south-africa/" title="Инвестиционные монеты ЮАР" country="">ЮАР</a>
+    
+                                </li>
+                            </ul>
+                            <!-- /.mobile-subnav -->
+                        </li>
+                        <li>
+                            <a href="/katalog/slitki/" title="Слитки">Слитки</a>
+    
+                        </li>
+                        <li>
+                            <a href="/katalog/collectibles/" title="Коллекционные монеты">Коллекционные монеты</a>
+    
+                        </li>
+                    </ul>
+                    <!-- /.mobile-subnav -->
+                </li>
+                <li>
+                    <a href="/analytics/" title="Аналитика">Аналитика</a>
+    
+                </li>
+                <li class="sub-menu">
+                    <a href="/stati/" title="Статьи">Статьи</a>
+                    <!-- mobile-subnav -->
+                    <ul>
+                        <li>
+                            <a href="/stati/monety-germanskoj-imperii" title="Монеты Германской империи">Монеты Германской империи</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/zolotye-monety-ssha-obzor-i-istoriya-monet" title="Золотые монеты США: обзор и история монет США, какие монеты США являются инвестиционными">Золотые монеты США: обзор и история монет США, какие монеты США являются инвестиционными</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/investicii-v-zolotye-i-serebryanye-monety" title="Инвестиции в золотые и серебряные монеты">Инвестиции в золотые и серебряные монеты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/seriya-investicionnyh-kanadskih-monet-zov-prirody" title="Серия инвестиционных канадских монет «Зов природы»">Серия инвестиционных канадских монет «Зов природы»</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/301-pamyatnye-i-investicionnye-monety-ukrainy-obzor-istoriya-poyavleniya-interesnye-fakty" title="Памятные и инвестиционные монеты Украины: обзор, история появления, интересные факты">Памятные и инвестиционные монеты Украины: обзор, история появления, интересные факты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/monety-avstralii-lunnoj-serii-obzor-istoriya-poyavleniya-interesnye-fakty" title="Монеты Австралии лунной серии: обзор, история появления, интересные факты">Монеты Австралии лунной серии: обзор, история появления, интересные факты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/monety-gany-seriya-giganty-lednikovogo-perioda" title="Монеты Ганы, серия: «Гиганты Ледникового периода»: обзор, история появления, интересные факты">Монеты Ганы, серия: «Гиганты Ледникового периода»: обзор, история появления, интересные факты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/monety-serii-zveri-korolevy-obzor-istoriya-poyavleniya-interesnye-fakty" title="Монеты серии «Звери Королевы»: обзор, история появления, интересные факты">Монеты серии «Звери Королевы»: обзор, история появления, интересные факты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/zolotaya-investicionnaya-moneta-kryugerrand-obzor-istoriya-poyavleniya-interesnye-fakty" title="Золотая инвестиционная монета «Крюгерранд» — обзор, история появления, интересные факты">Золотая инвестиционная монета «Крюгерранд» — обзор, история появления, интересные факты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/investicionnaya-moneta-filarmoniker-(venskaya-filarmoniya)-obzor-istoriya-poyavleniya-interesnye-fakty-i-foto" title="Инвестиционная монета «Филармоникер» (Венская Филармония): обзор, история появления, интересные факты и фото">Инвестиционная монета «Филармоникер» (Венская Филармония): обзор, история появления, интересные факты и фото</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/zolotaya-investicionnaya-moneta-britaniya-(soveren)-obzor-istoriya-poyavleniya-interesnye-fakty" title="Золотая инвестиционная монета «Британия» (Соверен) — обзор, история появления, интересные факты">Золотая инвестиционная монета «Британия» (Соверен) — обзор, история появления, интересные факты</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/investicionnaya-moneta-amerikanskij-orel-obzor-istoriya-poyavleniya-interesnye-fakty-i-foto" title="Инвестиционная монета «Американский Орел»: обзор, история появления, интересные факты и фото">Инвестиционная монета «Американский Орел»: обзор, история появления, интересные факты и фото</a>
+    
+                        </li>
+                        <li>
+                            <a href="/stati/kak-opredelit-podlinnost-investicionnyh-monet" title="Как определить подлинность инвестиционных монет">Как определить подлинность инвестиционных монет</a>
+    
+                        </li>
+                    </ul>
+                    <!-- /.mobile-subnav -->
+                </li>
+                <li class="sub-menu">
+                    <a href="/o-nas/" title="О нас">О нас</a>
+                    <!-- mobile-subnav -->
+                    <ul>
+                        <li>
+                            <a href="/o-nas/vykup" title="Выкуп">Выкуп</a>
+    
+                        </li>
+                    </ul>
+                    <!-- /.mobile-subnav -->
+                </li>
+                <li>
+                    <a href="/dostavka-i-oplata/" title="Доставка и оплата">Доставка и оплата</a>
+    
+                </li>
+                <li>
+                    <a href="/quotes-online" title="Котировки">Котировки</a>
+    
+                </li>
+                <li>
+                    <a href="/contacts" title="Контакты">Контакты</a>
+    
+                </li>
+                <li>
+                    <a href="/otzyvy/" title="Отзывы">Отзывы</a>
+    
+                </li>
+            </ul>
+        </div>
+        <!-- /.nav-mobile -->
+    </section>
+    <header class="header js-header header_new" style="margin-top: 41px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="#" class="logo logo_new">
+                        <img src="images/logo 1.svg" alt="">
+                        <div class="descr-text">Драгоценные металлы</div>
+                    </a>
+                </div>
+                
+                <div class="col-md-10">
+                    <nav class="navbar">
+                        <ul>
+                            <li class="sub-menu">
+                                <a class="full_catalog" href="/katalog/bullion-coins/" title="Монеты">Монеты</a>
+                                <div class="dropdown_top">
+                                    <div class="dropdown_top-column">
+                                        <h4>Тип монеты</h4>
+                                        <ul class="dropdown_top-list one_column">
+                                            <li><a style="color: aliceblue;" href="/katalog/bullion-coins/gold/">Золотые инвестиционные монеты</a></li>
+                                            <li><a style="color: aliceblue;" href="/katalog/bullion-coins/silver/">Серебряные инвестиционные монеты</a></li>
+                                            <li><a style="color: aliceblue;" href="/katalog/bullion-coins/silver/">Инвестиционные монеты</a></li>
+                                            <li><a style="color: aliceblue;" href="/katalog/bullion-coins/silver/">Коллекционные монеты</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_top-column">
+                                        <h4>Название монеты</h4>
+                                        <ul class="dropdown_top-list one_column">
+    
+    
+                                            <li><a href="/katalog/bullion-coins/australian-kangaroo/">Австралийский кенгуру</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/american-buffalo/">Американский бизон</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/american-eagle/">Американский орёл</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/britannia/">Британия</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/vienna-philharmonic/">Венский филармоникер</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/maple-leaf/">Кленовый лист</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/krugerrand/">Крюгерранд</a></li>
+    
+                                            <li><a href="/katalog/bullion-coins/panda/">Панда</a></li>
+    
+    
+    
+    
+    
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_top-column">
+                                        <h4>Страна монеты</h4>
+                                        <ul class="dropdown_top-list two_column">
+    
+    
+    
+    
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/australian/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/au.svg" alt="Австралия">
+                                                    </span>
+                                                    <span>Австралия</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/austria/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/at.svg" alt="Австрия">
+                                                    </span>
+                                                    <span>Австрия</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/great-britain/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/gb.svg" alt="Великобритания">
+                                                    </span>
+                                                    <span>Великобритания</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/ghana/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/gh.svg" alt="Гана">
+                                                    </span>
+                                                    <span>Гана</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/gerrmany/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/de.svg" alt="Германия">
+                                                    </span>
+                                                    <span>Германия</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/canada/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/ca.svg" alt="Канада">
+                                                    </span>
+                                                    <span>Канада</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/china/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/cn.svg" alt="Китай">
+                                                    </span>
+                                                    <span>Китай</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/mexico/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/mx.svg" alt="Мексика">
+                                                    </span>
+                                                    <span>Мексика</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/investicionnye-monety-rossii/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/ru.svg" alt="Россия">
+                                                    </span>
+                                                    <span>Россия</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/usa/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/us.svg" alt="США">
+                                                    </span>
+                                                    <span>США</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/ukraine/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/ua.svg" alt="Украина">
+                                                    </span>
+                                                    <span>Украина</span>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/katalog/bullion-coins/south-africa/">
+                                                    <span class="flag-icon flag-icon-au">
+                                                        <img src="flags/4x3/za.svg" alt="ЮАР">
+                                                    </span>
+                                                    <span>ЮАР</span>
+                                                </a>
+                                            </li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li>
+                                <a href="/katalog/slitki/" title="Слитки">Слитки</a>
+                            </li>
+    
+    
+    
+                            
+    
+    
+    
+    
+    
+                            <li class="sub-menu">
+                                <a href="/o-nas/" title="О нас">О нас</a>
+                                <ul>
+                                    <li>
+                                        <a href="/o-nas/vykup" title="Выкуп">Выкуп</a>
+    
+                                    </li>
+                                    <li>
+                                        <a href="/stati/" title="Статьи">Статьи</a>
+                                        <!--<a href="stati/" title="Статьи">Статьи</a>-->
+    
+                                    </li>
+                                    <li>
+                                        <a href="/otzyvy/" title="Отзывы">Отзывы</a>
+                                    </li>
+                                    <li>
+                                        <a href="/dostavka-i-oplata/" title="Отзывы">Доставка и оплата</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+    
+    
+    
+                            <li>
+                                <a href="/quotes-online" title="Котировки">Котировки</a>
+                            </li>
+    
+                            <li>
+                                <a href="/contacts" title="Контакты">Контакты</a>
+                            </li>
+    
+    
+                        </ul>
+                    </nav>
+    
+                </div>
+    
+            </div>
+        </div>
+    </header>
+    <section id="perenos" class="quotes_cont">
+        <div class="container">
+            <div class="row desktop_quote">
+                <div class="quotes_cont--block quotes_cont--first">
+                    <div class="quotes_cont--name">
+                        au
+                    </div>
+                    <div class="quotes_cont--price">
+                        $1,783.49 USD
+                    </div>
+                </div>
+                <div class="quotes_cont--block quotes_cont--second">
+                    <div class="quotes_cont--name">
+                        xag
+                    </div>
+                    <div class="quotes_cont--price">
+                        $22.47 USD
+                    </div>
+                </div>
+                <div class="quotes_cont--block quotes_cont--third">
+                    <div class="quotes_cont--name">
+                        xpt
+                    </div>
+                    <div class="quotes_cont--price">
+                        $2,528.71 USD
+                    </div>
+                </div>
+            </div>
+            <div id="mobile_quote" class="row mobile_quote">
+                <div class="mobile_quote--cont" >
+                    <div class="mobile_quote--block mobile_quote--first">
+                        <div class="mobile_quote--name ">
+                            au
+                        </div>
+                        <div class="mobile_quote--price">
+                            $1,783.49 <span>usd</span>
+                        </div>
+                    </div>
+                    <div class="mobile_quote--block mobile_quote--second">
+                        <div class="mobile_quote--name">
+                            xag
+                        </div>
+                        <div class="mobile_quote--price">
+                            $22.47  <span>usd</span>
+                        </div>
+                    </div>
+                    <div class="mobile_quote--block mobile_quote--third">
+                        <div class="mobile_quote--name">
+                            xpt
+                        </div>
+                        <div class="mobile_quote--price">
+                            $2,528.71  <span>usd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- фиксировавнное меню -->
+    <section class="fixed_header top-bar">
+        <div class="container">
+            <div class="row">
+
+           
+                <a href="#" class="logo">
+                    <img src="images/logo_head.svg" alt="">
+                    <div class="descr-text">Драгоценные металлы</div>
+                </a>
+                <ul class="top-bar-list d-none d-lg-block">
+                    <li class="top-bar-phone">
+                        <i class="fas icon icon-phone-alt"></i>
+                        <a href="tel:+420255790539" class="link-gray-darker">+420255790539</a>
+                    </li>
+                </ul>
+                <ul class="top-bar-list d-none d-lg-block">
+                    <li class="top-bar-callback">
+                        <a href="javascript:void(0);" class="top-bar-callback-link callback_new" data-fancybox="" data-src="#callback-form">Обратный звонок</a>
+                    </li>
+                </ul>
+                <div class="col-4  text-center">
+                    <!-- form-search -->
+                    <form class="form-search form--dark  d-none d-lg-block" action="/search">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" name="query" value="" placeholder="Поиск...">
+                            <button type="submit" class="form-search-btn fas icon-search"></button>
+                        </div>
+                    </form>
+                    
+                    <!-- /.form-search -->
+                </div>
+                <div class="mini-cart ">
+                    <a href="/cart">
+                        <i class="fas icon icon-shopping-cart"></i>
+                        <span class="ms2_total_count">0</span>
+                    </a>
+                </div>
+                <button id="burger_button">
+                    <span ></span>
+                    <span ></span>
+                    <span ></span>
+                </button>
+            </div>
+        </div>
+        
+    </section>
+    <section class="open_burger">
+        <div class="container">
+            <div class="row">
+                <div class="navbar_cont">
+                    <!-- navbar -->
+                    <nav class="navbar">
+                        <ul>
+                            <li class="sub-menu">
+                                <a class="full_catalog" href="/katalog/" title="Полный каталог монет">Монеты</a>
+                                <div class="dropdown_top">
+                                    <div class="dropdown_top-column">
+                                        <h4>Тип монеты</h4>
+                                        <ul class="dropdown_top-list one_column">
+                                            <li><a href="#">Золотые инвестиционные монеты</a></li>
+                                            <li><a href="#">Серебряные инвестиционные монеты</a></li>
+                                            <li><a href="#">Инвестиционные монеты</a></li>
+                                            <li><a href="#">Коллекционные монеты</a></li>
+                
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_top-column">
+                                        <h4>Название монеты</h4>
+                                        <ul class="dropdown_top-list two_column">
+                                            <li><a href="#">Американский бизон</a></li>
+                                            <li><a href="#">Австралийский кенгуру</a></li>
+                                            <li><a href="#">Американский орёл</a></li>
+                                            <li><a href="#">Британия</a></li>
+                                            <li><a href="#">Венский филармоникер</a></li>
+                                            <li><a href="#">Дублон</a></li>
+                                            <li><a href="#">Кленовый лист</a></li>
+                                            <li><a href="#">Крюггеранд</a></li>
+                                            <li><a href="#">Панда</a></li>
+                                            <li><a href="#">Соверен</a></li>
+                
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_top-column">
+                                        <h4>Страна монеты</h4>
+                                        <ul class="dropdown_top-list two_column">
+                                            <li><a href="#"><span class="flag-icon flag-icon-au"></span>Австралия</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-at"></span>Австрия</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-gb"></span>Великобритания</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-de"></span>Германия</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-es"></span>испания</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-ca"></span>Канада</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-cn"></span>Китай</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-mx"></span>Мексика</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-ru"></span>Россия</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-us"></span>США</a></li>
+                                            <li><a href="#"><span class="flag-icon flag-icon-za"></span>ЮАР</a></li>
+                
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                
+                            <li>
+                                <a href="/analytics/" title="Аналитика">Слитки</a>
+                
+                            </li>
+                           
+                            
+                            <li class="sub-menu">
+                                <a href="/o-nas/" title="О нас">О нас</a>
+                                <ul>
+                                    <li>
+                                        <a href="/o-nas/vykup" title="Выкуп">Выкуп</a>
+                
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quotes-online" title="Котировки">Котировки</a>
+                
+                            </li>
+                            <li>
+                                <a href="/contacts" title="Контакты">Контакты</a>
+                
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /.navbar -->
+                </div>
+                <div class="custom_btn">
+                    <ul class="currency">
+                        <li>
+                            <span>Euro</span>
+                            <ul class="currency-dropdown js-currency">
+                                <li><a href="#" data-id="4"><span>CZK </span>CZK</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="language" class="language">
+                        <li>
+                            <i class="fas icon icon-globe"></i><span>Русский</span>
+                            <ul class="language-dropdown">
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="region" class="language">
+                        <li>
+                            <i class="fas icon region-link__1"></i><span></span>
+                            <ul class="language-dropdown">
+                                <li><a class="region-link region-link__2" href="https://kalitagold.cz">Česko</a></li>
+                                <li><a class="region-link region-link__3" href="https://kalitagold.ch">Schweiz</a></li>
+                                <li><a class="region-link region-link__4" href="https://kalitagold.de">Deutschland</a></li>
+                                <li><a class="region-link region-link__5" href="https://kalitagold.es">España</a></li>
+                                <li><a class="region-link region-link__6" href="https://kalitagold.eu">Europe</a></li>
+                                <li><a class="region-link region-link__7" href="https://kalitagold.fr">La France</a></li>
+                                <li><a class="region-link region-link__8" href="https://kalitagold.it">Italia</a></li>
+                                <li><a class="region-link region-link__9" href="https://kalitagold.nl">Nederland</a></li>
+                                <li><a class="region-link region-link__10" href="https://kalitagold.pl">Polska</a></li>
+                                <li><a class="region-link region-link__11" href="https://kalitagold.uk">Greate Britan</a></li>
+                                <li><a class="region-link region-link__12" href="https://kalitagold.be">België</a></li>
+                                <li><a class="region-link region-link__13" href="https://kalitagold.at">Österreich</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <section class="quotes_cont">
+            <div class="container">
+                <div class="row">
+                    <div class="quotes_cont--block quotes_cont--first">
+                        <div class="quotes_cont--name">
+                            au
+                        </div>
+                        <div class="quotes_cont--price">
+                            $1,783.49 USD
+                        </div>
+                    </div>
+                    <div class="quotes_cont--block quotes_cont--second">
+                        <div class="quotes_cont--name">
+                            xag
+                        </div>
+                        <div class="quotes_cont--price">
+                            $22.47 USD
+                        </div>
+                    </div>
+                    <div class="quotes_cont--block quotes_cont--third">
+                        <div class="quotes_cont--name">
+                            xpt
+                        </div>
+                        <div class="quotes_cont--price">
+                            $2,528.71 USD
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <main>
+        <div class="breadcrumpsnew ">
+            <div class="container">
+                <a href="#">Главная</a>
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="none">
+                    <path d="M5 4L0.5 7.4641L0.5 0.535898L5 4Z" fill="#FFC107"/>
+                    </svg>
+                </i>
+                <span>
+                    Статьи 
+                </span>
+            </div>
+            
+        </div>
+        <section class="review">
+            <div class="container">
+                <div class="review_title">
+                    <h1><span>С</span>татьи</h1>
+                    <div class="choise_tematic">
+                        <div>
+                            Выбрать тематику:
+                        </div>
+                        <select name=""  class="tematics">
+                            <option value="all">Все статьи</option>
+                            <option value="analitika">Аналитика</option>
+                            <option value="news">Новости</option>
+                            <option value="investments">Инвестиции</option>
+                            <option value="coins">Монеты</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="review_popular">
+                    <h2>
+                        Популярные темы
+                    </h2>
+                    <div class="review_popular--blocks">
+                        <a href="#">#Золотая инвестиционная монета</a>
+                        <a href="#">#Инвестиционная монета</a>
+                        <a href="#">#Монеты</a>
+                        <a href="#">#Монеты</a>
+                        <a href="#">#Памятные монеты</a>
+                        <a href="#">#золотые монеты</a>
+                        <a href="#">#серебряные монеты</a>
+                        <a href="#" class="hiddenlink hideshow">#Монеты</a>
+                        <a href="#" class="hiddenlink hideshow">#Памятные монеты</a>
+                        <a href="#" class="hiddenlink  hideshow">#золотые монеты</a>
+                        <a href="#" class="hiddenlink hideshow">#серебряные монеты</a>
+                        <a href="#" class="showall">Смотреть все</a>
+                    </div>
+                    <div class="selectpopular">
+                        <select name=""  class="selectpopular_mob">
+                            <option value="">#Золотая инвестиционная монета</option>
+                            <option value="">#Инвестиционная монета</option>
+                            <option value="">#золото</option>
+                            <option value="">#Памятные монеты</option>
+                            <option value="">#золотые монеты</option>
+                            <option value="">#серебряные монеты</option>
+                            <option value="">#серебряные монеты</option>
+                            <option value="">#серебряные монеты</option>
+                            <option value="">#серебряные монеты</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="review_main">
+                    <div class="review_block">
+                        <div class="review_block_title">
+                            Монеты Германской империи                            
+
+                        </div>
+                        <div class="review_block_date">
+                            13.01.2022
+                        </div>
+                        <div class="review_block_text">
+                           Монеты Германской империи привлекают многих коллекционеров. 
+                        </div>
+                        <div class="review_block_author">
+                            <div class="review_block_author--title">
+                                Автор
+                            </div>
+                            <div class="review_block_author--name">
+                                Финансовый аналитик kalita.gold
+                            </div>
+                        </div>
+                        <button class="read_review">
+                            Читать статью
+                        </button>
+                    </div>
+                    <div class="review_block">
+                        <div class="review_block_title">
+                            Инвестиционная монета «Американский Орел»: обзор, история                           
+                            появления, интересные факты
+                        </div>
+                        <div class="review_block_date">
+                            13.01.2022
+                        </div>
+                        <div class="review_block_text">
+                            Инвестиционная монета «Американский Орел» — объект для выгодного вложения денег. С течением времени она становится все более популярной, ее стоимость растет
+                         </div>
+                        <div class="review_block_author">
+                            <div class="review_block_author--title">
+                                Автор
+                            </div>
+                            <div class="review_block_author--name">
+                                Финансовый аналитик kalita.gold
+                            </div>
+                        </div>
+                        <button class="read_review">
+                            Читать статью
+                        </button>
+                    </div>
+                    <div class="review_block">
+                        <div class="review_block_title">
+                            Монеты Германской империи                            
+
+                        </div>
+                        <div class="review_block_date">
+                            13.01.2022
+                        </div>
+                        <div class="review_block_text">
+                            Один из способов вложения денег — покупка инвестиционных монет. С течением времени денежные знаки дорожают, а их продажа позволяет  позволяет получить прибыль. Однако здес
+                        </div>
+                        <div class="review_block_author">
+                            <div class="review_block_author--title">
+                                Автор
+                            </div>
+                            <div class="review_block_author--name">
+                                Финансовый аналитик kalita.gold
+                            </div>
+                        </div>
+                        <button class="read_review">
+                            Читать статью
+                        </button>
+                    </div>
+                    <div class="review_block">
+                        <div class="review_block_title">
+                            Монеты Германской империи                            
+
+                        </div>
+                        <div class="review_block_date">
+                            13.01.2022
+                        </div>
+                        <div class="review_block_text">
+                           Монеты Германской империи привлекают многих коллекционеров. Правильнее будет сказать, что коллекционирование немецких старинных монет — это отдельная ветвь в нумизматике
+                        </div>
+                        <div class="review_block_author">
+                            <div class="review_block_author--title">
+                                Автор
+                            </div>
+                            <div class="review_block_author--name">
+                                Финансовый аналитик kalita.gold
+                            </div>
+                        </div>
+                        <button class="read_review">
+                            Читать статью
+                        </button>
+                    </div>
+                    <div class="review_block">
+                        <div class="review_block_title">
+                            Монеты Германской империи                            
+
+                        </div>
+                        <div class="review_block_date">
+                            13.01.2022
+                        </div>
+                        <div class="review_block_text">
+                           Монеты Германской империи привлекают многих коллекционеров. Правильнее будет сказать, что коллекционирование немецких старинных монет — это отдельная ветвь в нумизматике
+                        </div>
+                        <div class="review_block_author">
+                            <div class="review_block_author--title">
+                                Автор
+                            </div>
+                            <div class="review_block_author--name">
+                                Финансовый аналитик kalita.gold
+                            </div>
+                        </div>
+                        <button class="read_review">
+                            Читать статью
+                        </button>
+                    </div>
+                    <div class="review_block">
+                        <div class="review_block_title">
+                            Монеты Германской империи                            
+
+                        </div>
+                        <div class="review_block_date">
+                            13.01.2022
+                        </div>
+                        <div class="review_block_text">
+                           Монеты Германской империи привлекают многих коллекционеров. Правильнее будет сказать, что коллекционирование немецких старинных монет — это отдельная ветвь в нумизматике
+                        </div>
+                        <div class="review_block_author">
+                            <div class="review_block_author--title">
+                                Автор
+                            </div>
+                            <div class="review_block_author--name">
+                                Финансовый аналитик kalita.gold
+                            </div>
+                        </div>
+                        <button class="read_review">
+                            Читать статью
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pag">
+                <div class="pag_links">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                </div>
+                <button class="pag_showmore">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                        <rect x="6.75" y="0.5" width="1.5" height="15" fill="#FFC107"/>
+                        <rect y="8.75" width="1.5" height="15" transform="rotate(-90 0 8.75)" fill="#FFC107"/>
+                    </svg>
+                    <span>
+                        Ещё статьи
+                    </span>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="js/juqery.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="https://kit.fontawesome.com/981e3ab968.js" crossorigin="anonymous"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/fix_header.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+
+</html>
